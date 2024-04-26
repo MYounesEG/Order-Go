@@ -9,7 +9,7 @@ import 'package:order_go/theme/color.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
-
+a
   @override
   Widget build(BuildContext context) {
     return Scaffold(
