@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SpalashScreen extends StatefulWidget {
@@ -12,7 +13,13 @@ class _SpalashScreenState extends State<SpalashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Column(children: [
+        SvgPicture.asset(
+          'order_go_wb.svg',
+        )
+      ],),
       
+        
     );
   }
 }
