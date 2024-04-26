@@ -75,7 +75,7 @@ class StartPage extends StatelessWidget {
               alignment: Alignment.bottomCenter,
                child: Text.rich(
                   TextSpan( 
-                    text: 'Designed by ',
+                    text: 'designed by ',
                     style: TextStyle(
                       fontSize: 16,
                       color: mainColor,
@@ -85,7 +85,7 @@ class StartPage extends StatelessWidget {
                     ),
                     children: <TextSpan>[
                       TextSpan(
-                        text: "Bug Zappers",
+                        text: "bug zappers",
                         style: TextStyle(
                           fontSize: 16,
                           color: mainColor,
