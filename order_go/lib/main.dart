@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:order_go/pages/sign_up.dart';
 import 'package:order_go/pages/splash.dart';
 import 'package:order_go/pages/start.dart';
+import 'package:order_go/pages/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: HomePage(),
     );
   }
 }
