@@ -60,13 +60,136 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
               children: <Widget>[
                 Container(
-                  width: 300,
-                  height: 600,
+                  //width: 300,
+                  height: 520,
                   decoration: BoxDecoration(
-                    color: Colors.white, // Arkaplan rengi burada belirlenir
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(40), // Köşeleri yuvarlatma
+                    border: Border.all(
+                      color: mainColor, // Sınır rengi
+                      width: 5, // Sınır genişliği
+                    ), // Arkaplan rengi burada belirlenir
                     // Diğer dekorasyon özellikleri buraya eklenebilir
                   ),
+                  child:ListView(
+                    children: <Widget>[
+
+                      SizedBox(
+                        height: 10,
+                      ),
+                      
+                      Padding(
+                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                        child: Container(
+                        
+                          height: 75,
+                          decoration: BoxDecoration(
+                            color:bg,
+                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                            border: Border.all(
+                              color: bg, // Sınır rengi
+                              width: 5, // Sınır genişliği
+                            ), // Arkaplan rengi burada belirlenir
+                            // Diğer dekorasyon özellikleri buraya eklenebilir
+                          ),
+                        ),
+                      ),
+                      
+                      Padding(
+                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                        child: Container(
+                        
+                          height: 75,
+                          decoration: BoxDecoration(
+                            color:bg,
+                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                            border: Border.all(
+                              color: bg, // Sınır rengi
+                              width: 5, // Sınır genişliği
+                            ), // Arkaplan rengi burada belirlenir
+                            // Diğer dekorasyon özellikleri buraya eklenebilir
+                          ),
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                        child: Container(
+                        
+                          height: 75,
+                          decoration: BoxDecoration(
+                            color:bg,
+                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                            border: Border.all(
+                              color: bg, // Sınır rengi
+                              width: 5, // Sınır genişliği
+                            ), // Arkaplan rengi burada belirlenir
+                            // Diğer dekorasyon özellikleri buraya eklenebilir
+                          ),
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                        child: Container(
+                        
+                          height: 75,
+                          decoration: BoxDecoration(
+                            color:bg,
+                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                            border: Border.all(
+                              color: bg, // Sınır rengi
+                              width: 5, // Sınır genişliği
+                            ), // Arkaplan rengi burada belirlenir
+                            // Diğer dekorasyon özellikleri buraya eklenebilir
+                          ),
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                        child: Container(
+                        
+                          height: 75,
+                          decoration: BoxDecoration(
+                            color:bg,
+                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                            border: Border.all(
+                              color: bg, // Sınır rengi
+                              width: 5, // Sınır genişliği
+                            ), // Arkaplan rengi burada belirlenir
+                            // Diğer dekorasyon özellikleri buraya eklenebilir
+                          ),
+                        ),
+                      ),
+
+                    ],
+                  ),
                 ),
+                
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                      ),
+                    minimumSize: Size(400, 50),
+                    backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                    // Diğer özellikleri buraya ekleyebilirsiniz
+                  ),
+                  child: Text(
+                    'Sign up',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.bold,
+                      color : bg,
+                    ),
+                  ),
+                ),
+
+
               ],
             ),
           ),
