@@ -175,7 +175,7 @@ class SignUp extends StatelessWidget {
 
                 Container(
                   alignment: Alignment.bottomCenter,
-                  padding: EdgeInsets.only(top: 300),
+                  padding: EdgeInsets.only(top: 275),
                   child: Text.rich(
                     TextSpan(
                       text: 'Designed by ',
