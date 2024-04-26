@@ -12,7 +12,7 @@ class _SpalashScreenState extends State<SpalashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ,
+      
     );
   }
 }
