@@ -61,16 +61,74 @@ class StartPage extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           
+
+          
            Stack(
               children: [
+                //login button
+                Padding(
+                   padding: const EdgeInsets.only(top: 600.0,left: 22),
+                   child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                          ),
+                        minimumSize: Size(400, 50),
+                        backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                        // Diğer özellikleri buraya ekleyebilirsiniz
+                      ),
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          color : bg,
+                        ),
+                      ),
+                    ),
+                 ),
+
+
+                //sign up button
+                 Padding(
+                   padding: const EdgeInsets.only(top: 700.0,left: 22),
+                   child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                          ),
+                        minimumSize: Size(400, 50),
+                        backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                        // Diğer özellikleri buraya ekleyebilirsiniz
+                      ),
+                      child: Text(
+                        'Sign up',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          color : bg,
+                        ),
+                      ),
+                    ),
+                 ),
+            
+
                 SvgPicture.asset('assets/backgorund/background.svg',alignment: Alignment.topCenter,height:930,),
                 Padding(
-                  padding: const EdgeInsets.only(top: 270.0,left: 70),
+                  padding: const EdgeInsets.only(top: 392.0,left: 70),
                   child: SvgPicture.asset('assets/pictres/undraw_off_road_re_leme.svg',width: 300,),
                 ),
               ],
              ),
-           
+
+            
+
              Align(
               alignment: Alignment.bottomCenter,
                child: Text.rich(

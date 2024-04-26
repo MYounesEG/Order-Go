@@ -62,7 +62,10 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: 300,
                   height: 600,
-                  backgroundColor:Colors.white,
+                  decoration: BoxDecoration(
+                    color: Colors.white, // Arkaplan rengi burada belirlenir
+                    // Diğer dekorasyon özellikleri buraya eklenebilir
+                  ),
                 ),
               ],
             ),
