@@ -65,7 +65,7 @@ class StartPage extends StatelessWidget {
               children: [
                 SvgPicture.asset('assets/backgorund/background.svg',alignment: Alignment.topCenter,height:930,),
                 Padding(
-                  padding: const EdgeInsets.only(top: 270.0,left: 60),
+                  padding: const EdgeInsets.only(top: 270.0,left: 70),
                   child: SvgPicture.asset('assets/pictres/undraw_off_road_re_leme.svg',width: 300,),
                 ),
               ],
