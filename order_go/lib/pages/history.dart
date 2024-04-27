@@ -132,60 +132,63 @@ class HistoryPage extends StatelessWidget {
                   ),
                 ),
 
-                Stack(
-                  children: [
-                      
-                  
-                  Container(
-                    
-                  height: 120,
-                  width: 500,
-                  
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
-                    
-                  ),
-                ),
-                  Row(
-                    
-                    
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 30),
+                  child: Stack(
                     children: [
+                        
+                    
+                    Container(
                       
-                  IconButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
-                  },
-                    icon:Icon(Icons.settings),
-                    iconSize: 50,
-                    color: bg,
-                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
-
+                    height: 120,
+                    width: 500,
+                    
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                      
+                    ),
+                  ),
+                    Row(
+                      
+                      
+                      children: [
+                        
+                    IconButton(onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                    },
+                      icon:Icon(Icons.settings),
+                      iconSize: 50,
+                      color: bg,
+                      padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
                   
-
-                   IconButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
-                   },
-                    icon:Icon(Icons.home),
-                    iconSize: 50,
-                    color: mainColor,
-                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
-                  
-                  
-
-                   IconButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
-                   },
-                    icon:Icon(Icons.person),
-                    iconSize: 50,
-                    color: bg,
-                    padding: EdgeInsets.symmetric(vertical: 30,)),
-                    ],
-                  )
                     
                   
+                     IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                     },
+                      icon:Icon(Icons.home),
+                      iconSize: 50,
+                      color: mainColor,
+                      padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
+                    
+                    
                   
-
-                  ],
+                     IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                     },
+                      icon:Icon(Icons.person),
+                      iconSize: 50,
+                      color: bg,
+                      padding: EdgeInsets.symmetric(vertical: 30,)),
+                      ],
+                    )
+                      
+                    
+                    
+                  
+                    ],
+                  ),
                 )
               ],
             ),

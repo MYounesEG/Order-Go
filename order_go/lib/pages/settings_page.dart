@@ -7,7 +7,10 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:order_go/pages/history.dart';
+import 'package:order_go/pages/homepage.dart';
 import 'package:order_go/pages/login_page.dart';
+import 'package:order_go/pages/profile.dart';
 import 'package:order_go/pages/sign_up.dart';
 import 'package:order_go/theme/color.dart';
 
@@ -46,10 +49,10 @@ class SettingsPage extends StatelessWidget {
                 
                   leading: Icon(Icons.account_circle, color: Colors.white,size: 50,),
                   horizontalTitleGap:40 , // İkon rengini beyaz yap
-                  title: Text('Hesap', style: TextStyle(color: Colors.white,fontSize: 30),),
+                  title: Text('Account', style: TextStyle(color: Colors.white,fontSize: 30),),
                   
                   onTap: () {
-                    // Hesap ayarları sayfasına git
+                   Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),)); // Hesap ayarları sayfasına git
                   },
                   
                 ),
@@ -57,11 +60,11 @@ class SettingsPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20.0,bottom: 20,left: 20),
                 child: ListTile(
-                  leading: Icon(Icons.notifications, color: Colors.white,size: 40),
+                  leading: Icon(Icons.history, color: Colors.white,size: 40,),
                   horizontalTitleGap:40 ,
-                  title: Text('Bildirimler', style: TextStyle(color: Colors.white,fontSize: 30)),
+                  title: Text('History', style: TextStyle(color: Colors.white,fontSize: 30)),
                   onTap: () {
-                    // Bildirim ayarları sayfasına git
+                    Navigator.push(context, MaterialPageRoute(builder:(context) => HistoryPage(),));// Bildirim ayarları sayfasına git
                   },
                 ),
               ),
@@ -70,7 +73,7 @@ class SettingsPage extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.logout, color: Colors.white,size: 40),
                   horizontalTitleGap:40 ,
-                  title: Text('Çıkış Yap', style: TextStyle(color: Colors.white,fontSize: 30)),
+                  title: Text('Exit app', style: TextStyle(color: Colors.white,fontSize: 30)),
                   onTap: () {
                     // Çıkış yap işlemini gerçekleştir
                   },
@@ -81,7 +84,7 @@ class SettingsPage extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.feedback, color: Colors.white,size: 40),
                   horizontalTitleGap:40 ,
-                  title: Text('Geri Bildirim', style: TextStyle(color: Colors.white,fontSize: 30)),
+                  title: Text('FeedBack', style: TextStyle(color: Colors.white,fontSize: 30)),
                   onTap: () {
                     // Geri bildirim sayfasına git
                   },
@@ -92,44 +95,74 @@ class SettingsPage extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.help, color: Colors.white,size: 40),
                   horizontalTitleGap:40 ,
-                  title: Text('Yardım', style: TextStyle(color: Colors.white,fontSize: 30)),
+                  title: Text('Help', style: TextStyle(color: Colors.white,fontSize: 30)),
                   onTap: () {
                     // Yardım sayfasına git
                   },
                 ),
               ),
-            
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 200),
+              child: Stack(
+                    children: [
+                        
+                    
+                    Container(
+                      
+                    height: 120,
+                    width: 500,
+                    
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                      
+                    ),
+                  ),
+                    Row(
+                      
+                      
+                      children: [
+                        
+                    IconButton(onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                    },
+                      icon:Icon(Icons.settings),
+                      iconSize: 50,
+                      color: bg,
+                      padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
+              
+                    
+              
+                     IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                     },
+                      icon:Icon(Icons.home),
+                      iconSize: 50,
+                      color: mainColor,
+                      padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
+                    
+                    
+              
+                     IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                     },
+                      icon:Icon(Icons.person),
+                      iconSize: 50,
+                      color: bg,
+                      padding: EdgeInsets.symmetric(vertical: 30,)),
+                      ],
+                    )
+                      
+                    
+                    
+              
+                    ],
+                  ),
+            )
           ],
           
         ),
-        bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          ),
-          color: Colors.white, // Arka plan rengi
-        ),
-        child: BottomNavigationBar(
-          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
-          elevation: 0, // Gölgeyi kaldır
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.history,size: 40,color: bg),
-              label: 'history', 
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home,size: 40,color: bg),
-              label: 'home', 
-              
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings,size: 40,color: bg),
-              label: 'settings', 
-            ),
-          ],
-        ),
-      ),
+        
       extendBodyBehindAppBar: true,
     );
   }
