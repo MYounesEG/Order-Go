@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:order_go/pages/homepage.dart';
-import 'package:order_go/pages/profile.dart';
-import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({Key? key}) : super(key: key);
@@ -14,11 +10,24 @@ class HistoryPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: bg,
       appBar: AppBar(
-        //Profile
-        
-
-        //Menu Button
-        leading: SizedBox(height: 12,),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.person),
+            padding: EdgeInsets.only(right: 30),
+            iconSize: 40,
+            color: bg,
+            onPressed: () {
+              // Arama işlemini tetikle
+            },
+          )
+        ],
+        leading: IconButton(
+          padding: EdgeInsets.only(left: 30, bottom: 10),
+          icon: Icon(Icons.menu),
+          iconSize: 40,
+          color: bg,
+          onPressed: () {},
+        ),
         toolbarHeight: 100,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
@@ -33,167 +42,121 @@ class HistoryPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10), // Yatay yönde genişlik verelim
+          padding: EdgeInsets.all(20),
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
                   height: 30,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left:30 ),
+                  padding: const EdgeInsets.only(left: 30),
                   child: Text(
                     'History',
                     style: TextStyle(
-                      fontSize: 30, // Metin boyutu
-                      color: mainColor, // Metin rengi
+                      fontSize: 30,
+                      color: mainColor,
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
                   child: Container(
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "Pizza",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
                     height: 100,
                     decoration: BoxDecoration(
                       color: mainColor,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
+                      borderRadius: BorderRadius.circular(20),
                       border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
+                        color: bg,
+                        width: 5,
                       ),
                     ),
                   ),
                 ),
+                // Diğer Container widgetları buraya eklenecek
 
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-
+                // Stack widgetı buraya eklenecek
                 Stack(
                   children: [
-                      
-                  
-                  Container(
-                    
-                  height: 120,
-                  width: 500,
-                  
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
-                    
-                  ),
-                ),
-                  Row(
-                    
-                    
-                    children: [
-                      
-                  IconButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
-                  },
-                    icon:Icon(Icons.settings),
-                    iconSize: 50,
-                    color: bg,
-                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
-
-                  
-
-                   IconButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
-                   },
-                    icon:Icon(Icons.home),
-                    iconSize: 50,
-                    color: mainColor,
-                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
-                  
-                  
-
-                   IconButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
-                   },
-                    icon:Icon(Icons.person),
-                    iconSize: 50,
-                    color: bg,
-                    padding: EdgeInsets.symmetric(vertical: 30,)),
-                    ],
-                  )
-                    
-                  
-                  
-
+                    Container(
+                      height: 120,
+                      width: 500,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SettingsPage(),
+                              ),
+                            );
+                          },
+                          icon: Icon(Icons.settings),
+                          iconSize: 50,
+                          color: bg,
+                          padding:
+                              EdgeInsets.symmetric(vertical: 30, horizontal: 25),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
+                          },
+                          icon: Icon(Icons.home),
+                          iconSize: 50,
+                          color: mainColor,
+                          padding:
+                              EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfilePage(),
+                              ),
+                            );
+                          },
+                          icon: Icon(Icons.person),
+                          iconSize: 50,
+                          color: bg,
+                          padding: EdgeInsets.symmetric(vertical: 30),
+                        ),
+                      ],
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
         ),
       ),
-     
-      
     );
   }
 }
