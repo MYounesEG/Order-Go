@@ -5,7 +5,8 @@ import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +93,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 TextField(
+                  controller: _usernameController,
                   decoration: InputDecoration(
                     hintText: 'username',
                     hintStyle: TextStyle(color: Colors.grey),
@@ -112,6 +114,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 TextField(
+                  controller: _passwordController,
                   decoration: InputDecoration(
                     hintText: 'password',
                     hintStyle: TextStyle(color: Colors.grey),
@@ -134,10 +137,24 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 30),
                 ElevatedButton(
                   
-                  onPressed: () {
-                    leading:  SizedBox(height: 20,);
-                    Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
-                  },
+                onPressed: () {
+                  // Check if username and password are not empty
+                  if (_usernameController.text.isNotEmpty &&
+                      _passwordController.text.isNotEmpty) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
+                  } else{
+                    // Handle the case where either username or password is empty
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Please fill in both username and password.'),
+                      ),
+                    );
+                    // You can also change the button style to indicate the error
+                  }
+                },
                   style: ElevatedButton.styleFrom(
                     
                     shape: RoundedRectangleBorder(
