@@ -1,4 +1,4 @@
-import 'dart:js_util';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -102,7 +102,34 @@ class SettingsPage extends StatelessWidget {
           ],
           
         ),
-      
+        bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
+          color: Colors.white, // Arka plan rengi
+        ),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
+          elevation: 0, // Gölgeyi kaldır
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.history,size: 40,color: bg),
+              label: 'history', 
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home,size: 40,color: bg),
+              label: 'home', 
+              
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings,size: 40,color: bg),
+              label: 'settings', 
+            ),
+          ],
+        ),
+      ),
       extendBodyBehindAppBar: true,
     );
   }
