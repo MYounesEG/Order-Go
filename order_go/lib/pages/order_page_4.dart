@@ -64,22 +64,87 @@ class _OrderPageState extends State<OrderPageFour> {
                 ),
                 
                 Center(
+
                   child: Text("Order Details",
-                  style: TextStyle(color: mainColor,fontSize: 30,fontFamily: 'Poppins',fontWeight: FontWeight.bold),
-                  
-                  
+                  style: TextStyle(color: mainColor,
+                  fontSize: 40,fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold),
                   
                   ),
                   
                 ),
+                
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      height: 4,
+                      width: 150,
+                      color: mainColor,
+                    ),
+                  ),
+                ),
+
+                SizedBox(
+                  height: 45,
+                ),
 
                 Center(
-                  child: Text("Order Details",
-                  style: TextStyle(color: mainColor,fontSize: 30,fontFamily: 'Poppins',fontWeight: FontWeight.bold),
-                  
-                  
+                  child: Text("Balbuks",
+                  style: TextStyle(color: Colors.white,
+                  fontSize: 24,fontFamily: 'Poppins',
+                  fontWeight: FontWeight.normal),
                   
                   ),
+                ),
+
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      height: 120,
+                      width: 4,
+                      color: mainColor,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Center(
+                  child: Text("Filter Coffee",
+                  style: TextStyle(color: Colors.white,
+                  fontSize: 24,fontFamily: 'Poppins',
+                  fontWeight: FontWeight.normal),
+                  
+                  ),
+                ),
+
+                  Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      height: 120,
+                      width: 4,
+                      color: mainColor,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Center(
+                  child: Text("5 Minute Later",
+                  style: TextStyle(color: Colors.white,
+                  fontSize: 24,fontFamily: 'Poppins',
+                  fontWeight: FontWeight.normal),
+                  
+                  ),
+                ),
+
+
+                  SizedBox(
+                  height: 40,
                 ),
 
                 Center(

@@ -109,6 +109,8 @@ class SignUp extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w400,
                   ),
                   keyboardType: TextInputType.number, // Sadece numaraların klavyesini açar
                   inputFormatters: <TextInputFormatter>[
@@ -131,6 +133,8 @@ class SignUp extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 SizedBox(height: 20),
@@ -149,6 +153,8 @@ class SignUp extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w400,
                   ),
                   obscureText: true, 
                 ),

@@ -62,17 +62,17 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
               children: <Widget>[
                 
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal:120),
-                  child: Text(
-                          'Favorites',
-                          style: TextStyle(
-                            fontSize: 30, // Metin boyutu
-                            color: Colors.white, // Metin rengi
-                          ),
-                              
-                    ),
-                ),
+                 Center(
+                   child: Text(
+                            'Favorites',
+                            style: TextStyle(
+                              fontSize: 45, // Metin boyutu
+                              color: Colors.white, // Metin rengi
+                            ),
+                                
+                      ),
+                 ),
+                
 
                 Container(
                   //width: 300,
@@ -94,7 +94,7 @@ class HomePage extends StatelessWidget {
                         child: Container(
                           child: Center(
                             child: Text(
-                              "Favorites",
+                              "Espresso",
                               style: TextStyle(
                                 fontSize: 30, // Metin boyutu
                                 color: Colors.white, // Metin rengi
@@ -119,7 +119,16 @@ class HomePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left:20,right: 20,top: 20),
                         child: Container(
-                        
+                            child: Center(
+                            child: Text(
+                              "Filter Coffee",
+                              style: TextStyle(
+                                fontSize: 30, // Metin boyutu
+                                color: Colors.white, // Metin rengi
+                              ),
+                                  
+                            ),
+                          ),
                           height: 75,
                           decoration: BoxDecoration(
                             color:bg,

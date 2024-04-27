@@ -68,60 +68,77 @@ class StartPage extends StatelessWidget {
            Stack(
               children: [
                 //login button
-                Padding(
-                   padding: const EdgeInsets.only(top: 600.0,left: 22),
-                   child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),));
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                Center(
+                  child: Padding(
+                     padding: const EdgeInsets.only(top: 600.0,),
+                     child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),));
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                            ),
+                          minimumSize: Size(400, 50),
+                          backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                          padding: EdgeInsets.symmetric( vertical: 20),
+                          // Diğer özellikleri buraya ekleyebilirsiniz
+                        ),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.bold,
+                            color : bg,
                           ),
-                        minimumSize: Size(400, 50),
-                        backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
-                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                        // Diğer özellikleri buraya ekleyebilirsiniz
-                      ),
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.bold,
-                          color : bg,
                         ),
                       ),
+                   ),
+                ),
+
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 695),
+                    child: Container(
+                      height:80 ,
+                      width: 400,
+                      
+                      decoration: BoxDecoration(
+                        color: mainColor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                     ),
-                 ),
-
-
+                  ),
+                ),
                 //sign up button
-                 Padding(
-                   padding: const EdgeInsets.only(top: 700.0,left: 22),
-                   child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder:(context) => SignUp(),));
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                 Center(
+                   child: Padding(
+                     padding: const EdgeInsets.only(top: 700.0),
+                     child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => SignUp(),));
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                            ),
+                          minimumSize: Size(390, 45),
+                          backgroundColor: bg, // Doğru parametre backgroundColor olarak kullanılır
+                          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                          // Diğer özellikleri buraya ekleyebilirsiniz
+                        ),
+                        child: Text(
+                          'Sign up',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.bold,
+                            color : mainColor,
                           ),
-                        minimumSize: Size(400, 50),
-                        backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
-                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                        // Diğer özellikleri buraya ekleyebilirsiniz
-                      ),
-                      child: Text(
-                        'Sign up',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.bold,
-                          color : bg,
                         ),
                       ),
-                    ),
+                   ),
                  ),
             
 
@@ -133,32 +150,34 @@ class StartPage extends StatelessWidget {
               
               //
                 //login button
-                Padding(
-                   padding: const EdgeInsets.only(top: 600.0,left: 22),
-                   child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),));
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                Center(
+                  child: Padding(
+                     padding: const EdgeInsets.only(top: 600.0,),
+                     child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),));
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                            ),
+                          minimumSize: Size(400, 50),
+                          backgroundColor: Colors.transparent, // Doğru parametre backgroundColor olarak kullanılır
+                          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                          // Diğer özellikleri buraya ekleyebilirsiniz
+                        ),
+                        child: Text(
+                          '',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.bold,
+                            color : bg,
                           ),
-                        minimumSize: Size(400, 50),
-                        backgroundColor: Colors.transparent, // Doğru parametre backgroundColor olarak kullanılır
-                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                        // Diğer özellikleri buraya ekleyebilirsiniz
-                      ),
-                      child: Text(
-                        '',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.bold,
-                          color : bg,
                         ),
                       ),
-                    ),
-                 ),
+                   ),
+                ),
               //
               
               ],
