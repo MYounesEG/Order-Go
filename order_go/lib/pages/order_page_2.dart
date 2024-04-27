@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:order_go/pages/order_page_2.dart';
+import 'package:order_go/pages/order_page_3.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-class OrderPageOne extends StatefulWidget {
-  const OrderPageOne({Key? key}) : super(key: key);
+class OrderPageTwo extends StatefulWidget {
+  const OrderPageTwo({Key? key}) : super(key: key);
 
   @override
-  State<OrderPageOne> createState() => _OrderPageState();
+  State<OrderPageTwo> createState() => _OrderPageState();
 }
 
-class _OrderPageState extends State<OrderPageOne> {
+class _OrderPageState extends State<OrderPageTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +64,7 @@ class _OrderPageState extends State<OrderPageOne> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 115),
                   child: Text(
-                    'Choose Restaurant',
+                    'Pick a restaurant',
                     style: TextStyle(
                       fontSize: 20, // Metin boyutu
                       color: Colors.white, // Metin rengi
@@ -138,7 +138,7 @@ class _OrderPageState extends State<OrderPageOne> {
                   padding: const EdgeInsets.symmetric(horizontal: 140,vertical: 20),
                   child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageTwo(),));
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageThree(),));
                         },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(

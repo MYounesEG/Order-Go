@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_go/pages/order_page.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -192,7 +193,9 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageOne(),));
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
