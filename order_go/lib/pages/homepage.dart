@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -167,24 +168,31 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                SizedBox(
+                        height: 30,
                       ),
-                    minimumSize: Size(400, 50),
-                    backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                    // Diğer özellikleri buraya ekleyebilirsiniz
-                  ),
-                  child: Text(
-                    'Sign up',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.bold,
-                      color : bg,
+
+                Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                        ),
+                      minimumSize: Size(400, 50),
+                      backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                      // Diğer özellikleri buraya ekleyebilirsiniz
+                    ),
+                    child: Text(
+                      'Order Now',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.bold,
+                        color : bg,
+                      ),
                     ),
                   ),
                 ),
@@ -195,6 +203,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      
     );
   }
 }
