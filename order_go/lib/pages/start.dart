@@ -5,6 +5,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:order_go/pages/login_page.dart';
+import 'package:order_go/pages/sign_up.dart';
 import 'package:order_go/theme/color.dart';
 
 class StartPage extends StatelessWidget {
@@ -69,7 +71,9 @@ class StartPage extends StatelessWidget {
                 Padding(
                    padding: const EdgeInsets.only(top: 600.0,left: 22),
                    child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),));
+                      },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
@@ -96,7 +100,9 @@ class StartPage extends StatelessWidget {
                  Padding(
                    padding: const EdgeInsets.only(top: 700.0,left: 22),
                    child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => SignUp(),));
+                      },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi

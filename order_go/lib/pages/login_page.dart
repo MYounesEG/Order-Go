@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:order_go/pages/homepage.dart';
+import 'package:order_go/pages/start.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -74,7 +76,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     iconSize: 15, // İkon
                     onPressed: () {
-                      // Butona basıldığında yapılacak işlemler
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => StartPage(),));// Butona basıldığında yapılacak işlemler
                     },
                   ),
                 ),
@@ -126,7 +128,9 @@ class LoginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                  },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatmak içi
