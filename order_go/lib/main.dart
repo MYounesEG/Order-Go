@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:order_go/pages/history.dart';
+import 'package:order_go/pages/order_page_3.dart';
+import 'package:order_go/pages/profile.dart';
 import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/pages/sign_up.dart';
 import 'package:order_go/pages/splash.dart';
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OrderPageOne(),
+      home: SplashScreen(),
     );
   }
 }

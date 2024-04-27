@@ -135,7 +135,7 @@ class _OrderPageState extends State<OrderPageOne> {
                 ),
                 
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 140,vertical: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 20),
                   child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageTwo(),));
@@ -146,7 +146,7 @@ class _OrderPageState extends State<OrderPageOne> {
                             ),
                           minimumSize: Size(200, 80),
                           backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
-                          padding: EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(

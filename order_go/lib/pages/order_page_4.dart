@@ -60,106 +60,55 @@ class _OrderPageState extends State<OrderPageFour> {
               crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
               children: <Widget>[
                 SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 115),
-                  child: Text(
-                    'Order Details',
-                    style: TextStyle(
-                      fontSize: 20, // Metin boyutu
-                      color: Colors.white, // Metin rengi
-                    ),
+                
+                Center(
+                  child: Text("Order Details",
+                  style: TextStyle(color: mainColor,fontSize: 30,fontFamily: 'Poppins',fontWeight: FontWeight.bold),
+                  
+                  
+                  
                   ),
+                  
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height: 130,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
+
+                Center(
+                  child: Text("Order Details",
+                  style: TextStyle(color: mainColor,fontSize: 30,fontFamily: 'Poppins',fontWeight: FontWeight.bold),
+                  
+                  
+                  
                   ),
                 ),
 
-                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height: 130,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height: 130,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height:130,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-                
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 140,vertical: 20),
-                  child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
-                        },
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 20),
+                    child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                              ),
+                            minimumSize: Size(200, 80),
+                            backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                            padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                            // Diğer özellikleri buraya ekleyebilirsiniz
+                          ),
+                          child: Text(
+                            'Back home',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: "Poppins",
+                              fontWeight: FontWeight.bold,
+                              color : bg,
                             ),
-                          minimumSize: Size(200, 80),
-                          backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
-                          padding: EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-                          // Diğer özellikleri buraya ekleyebilirsiniz
-                        ),
-                        child: Text(
-                          'Back home',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.bold,
-                            color : bg,
                           ),
                         ),
-                      ),
+                  ),
                 ),
               ],
             ),
