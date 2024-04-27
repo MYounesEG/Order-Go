@@ -1,5 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:order_go/pages/history.dart';
 import 'package:order_go/pages/order_page.dart';
+import 'package:order_go/pages/profile.dart';
+import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -14,7 +19,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
 
         //Profile
-        
+        leading: SizedBox(height: 32,),
 
         //Menu Button
         
@@ -34,15 +39,18 @@ class HomePage extends StatelessWidget {
 
       ), 
       body: SingleChildScrollView(
-
-        child: Padding(
-          padding: EdgeInsets.all(40), // Yatay yönde genişlik verelim
-          child: Center(
+        
+        child: 
+           Center(
             child: Column(
+              
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
               children: <Widget>[
                 
+                SizedBox(
+                  height: 15,
+                ),
                  Center(
                    child: Text(
                             'Favorites',
@@ -58,230 +66,270 @@ class HomePage extends StatelessWidget {
                  ),
                 
 
-                Container(
-                  //width: 300,
-                  height: 520,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40), // Köşeleri yuvarlatma
-                    border: Border.all(
-                      color: mainColor, // Sınır rengi
-                      width: 5, // Sınır genişliği
-                    ), // Arkaplan rengi burada belirlenir
-                    // Diğer dekorasyon özellikleri buraya eklenebilir
-                  ),
-                  child:ListView(
-                    children: <Widget>[
-                      
-                      Padding(
-                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              "Espresso",
-                              style: TextStyle(
-                                fontSize: 30, // Metin boyutu
-                                color: Colors.white,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700, // Metin rengi
-                              ),
-                                  
-                            ),
-                          ),
-                          height: 75,
-                          decoration: BoxDecoration(
-                            color:bg,
-                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
-                            border: Border.all(
-                              color: bg, // Sınır rengi
-                              width: 5, // Sınır genişliği
-                            ),
-                            
-
-                          ),
-                        ),
-                      ),
-                      
-                      Padding(
-                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
-                        child: Container(
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+                  child: Container(
+                    //width: 300,
+                    height: 520,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(40), // Köşeleri yuvarlatma
+                      border: Border.all(
+                        color: mainColor, // Sınır rengi
+                        width: 5, // Sınır genişliği
+                      ), // Arkaplan rengi burada belirlenir
+                      // Diğer dekorasyon özellikleri buraya eklenebilir
+                    ),
+                    child:ListView(
+                      children: <Widget>[
+                        
+                        Padding(
+                          padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                          child: Container(
                             child: Center(
-                            child: Text(
-                              "Filter Coffee",
-                              style: TextStyle(
-                                fontSize: 30, // Metin boyutu
-                                color: Colors.white,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700, // Metin rengi
+                              child: Text(
+                                "Espresso",
+                                style: TextStyle(
+                                  fontSize: 30, // Metin boyutu
+                                  color: Colors.white,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w700, // Metin rengi
+                                ),
+                                    
                               ),
-                                  
+                            ),
+                            height: 75,
+                            decoration: BoxDecoration(
+                              color:bg,
+                              borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                              border: Border.all(
+                                color: bg, // Sınır rengi
+                                width: 5, // Sınır genişliği
+                              ),
+                              
+                  
                             ),
                           ),
-                          height: 75,
-                          decoration: BoxDecoration(
-                            color:bg,
-                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
-                            border: Border.all(
-                              color: bg, // Sınır rengi
-                              width: 5, // Sınır genişliği
-                            ), // Arkaplan rengi burada belirlenir
-                            // Diğer dekorasyon özellikleri buraya eklenebilir
-                          ),
                         ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              "Americano",
-                              style: TextStyle(
-                                fontSize: 30, // Metin boyutu
-                                color: Colors.white,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700, // Metin rengi
+                        
+                        Padding(
+                          padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                          child: Container(
+                              child: Center(
+                              child: Text(
+                                "Filter Coffee",
+                                style: TextStyle(
+                                  fontSize: 30, // Metin boyutu
+                                  color: Colors.white,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w700, // Metin rengi
+                                ),
+                                    
                               ),
-                                  
+                            ),
+                            height: 75,
+                            decoration: BoxDecoration(
+                              color:bg,
+                              borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                              border: Border.all(
+                                color: bg, // Sınır rengi
+                                width: 5, // Sınır genişliği
+                              ), // Arkaplan rengi burada belirlenir
+                              // Diğer dekorasyon özellikleri buraya eklenebilir
                             ),
                           ),
-                          height: 75,
-                          decoration: BoxDecoration(
-                            color:bg,
-                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
-                            border: Border.all(
-                              color: bg, // Sınır rengi
-                              width: 5, // Sınır genişliği
-                            ), // Arkaplan rengi burada belirlenir
-                            // Diğer dekorasyon özellikleri buraya eklenebilir
-                          ),
                         ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              "Flat White",
-                              style: TextStyle(
-                                fontSize: 30, // Metin boyutu
-                                color: Colors.white,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700, // Metin rengi
+                  
+                        Padding(
+                          padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                          child: Container(
+                            child: Center(
+                              child: Text(
+                                "Americano",
+                                style: TextStyle(
+                                  fontSize: 30, // Metin boyutu
+                                  color: Colors.white,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w700, // Metin rengi
+                                ),
+                                    
                               ),
-                                  
+                            ),
+                            height: 75,
+                            decoration: BoxDecoration(
+                              color:bg,
+                              borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                              border: Border.all(
+                                color: bg, // Sınır rengi
+                                width: 5, // Sınır genişliği
+                              ), // Arkaplan rengi burada belirlenir
+                              // Diğer dekorasyon özellikleri buraya eklenebilir
                             ),
                           ),
-                          height: 75,
-                          decoration: BoxDecoration(
-                            color:bg,
-                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
-                            border: Border.all(
-                              color: bg, // Sınır rengi
-                              width: 5, // Sınır genişliği
-                            ), // Arkaplan rengi burada belirlenir
-                            // Diğer dekorasyon özellikleri buraya eklenebilir
-                          ),
                         ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left:20,right: 20,top: 20),
-                        child: Container(
-                          child: Center(
-                            child: Text(
-                              "Lungo",
-                              style: TextStyle(
-                                fontSize: 30, // Metin boyutu
-                                color: Colors.white,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700, // Metin rengi
+                  
+                        Padding(
+                          padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                          child: Container(
+                            child: Center(
+                              child: Text(
+                                "Flat White",
+                                style: TextStyle(
+                                  fontSize: 30, // Metin boyutu
+                                  color: Colors.white,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w700, // Metin rengi
+                                ),
+                                    
                               ),
-                                  
+                            ),
+                            height: 75,
+                            decoration: BoxDecoration(
+                              color:bg,
+                              borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                              border: Border.all(
+                                color: bg, // Sınır rengi
+                                width: 5, // Sınır genişliği
+                              ), // Arkaplan rengi burada belirlenir
+                              // Diğer dekorasyon özellikleri buraya eklenebilir
                             ),
                           ),
-                          height: 75,
-                          decoration: BoxDecoration(
-                            color:bg,
-                            borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
-                            border: Border.all(
-                              color: bg, // Sınır rengi
-                              width: 5, // Sınır genişliği
-                            ), // Arkaplan rengi burada belirlenir
-                            // Diğer dekorasyon özellikleri buraya eklenebilir
+                        ),
+                  
+                        Padding(
+                          padding: const EdgeInsets.only(left:20,right: 20,top: 20),
+                          child: Container(
+                            child: Center(
+                              child: Text(
+                                "Lungo",
+                                style: TextStyle(
+                                  fontSize: 30, // Metin boyutu
+                                  color: Colors.white,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w700, // Metin rengi
+                                ),
+                                    
+                              ),
+                            ),
+                            height: 75,
+                            decoration: BoxDecoration(
+                              color:bg,
+                              borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatma
+                              border: Border.all(
+                                color: bg, // Sınır rengi
+                                width: 5, // Sınır genişliği
+                              ), // Arkaplan rengi burada belirlenir
+                              // Diğer dekorasyon özellikleri buraya eklenebilir
+                            ),
                           ),
                         ),
-                      ),
-
-                    ],
+                  
+                      ],
+                    ),
                   ),
                 ),
                 
                
 
                 Padding(
-                  padding: const EdgeInsets.all(30.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageOne(),));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                  padding: const EdgeInsets.only(top: 10,),
+                  child: Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageOne(),));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                          ),
+                        minimumSize: Size(200, 30),
+                        backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                        // Diğer özellikleri buraya ekleyebilirsiniz
+                      ),
+                      child: Text(
+                        'Order Now',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          color : bg,
                         ),
-                      minimumSize: Size(300, 30),
-                      backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
-                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                      // Diğer özellikleri buraya ekleyebilirsiniz
-                    ),
-                    child: Text(
-                      'Order Now',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        color : bg,
                       ),
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
 
+                Stack(
+                  children: [
+                      
+                  
+                  Container(
+                    
+                  height: 120,
+                  width: 500,
+                  
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                    
+                  ),
+                ),
+                  Row(
+                    
+                    
+                    children: [
+                      
+                  IconButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                  },
+                    icon:Icon(Icons.settings),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
 
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                   },
+                    icon:Icon(Icons.home),
+                    iconSize: 50,
+                    color: mainColor,
+                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
+                  
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                   },
+                    icon:Icon(Icons.person),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.symmetric(vertical: 30,)),
+                    ],
+                  )
+                    
+                  
+                  
+
+                  ],
+                )
+                
+                
               ],
+              
             ),
           ),
-        ),
+        
+        
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          ),
-          color: Colors.white, // Arka plan rengi
-        ),
-        child: BottomNavigationBar(
-          
-          selectedItemColor: Colors.amber,  
-          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
-          elevation: 0, // Gölgeyi kaldır
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.history,size: 40,color: bg),
-              label: 'history', 
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home,size: 40,color: bg),
-              label: 'home', 
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings,size: 40,color: bg),
-              label: 'settings', 
-            ),
-          ],
-        ),
-      ),
+      
+      
+      
     );
   }
 }

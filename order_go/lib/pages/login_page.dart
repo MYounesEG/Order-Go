@@ -87,8 +87,7 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     color: Colors.white,
-                    fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700,
+                    
                   ),
                 ),
                 SizedBox(height: 30),
@@ -107,7 +106,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
-                    fontFamily: "Poppins",
+                     fontFamily: "Poppins",
                                 fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -127,23 +126,28 @@ class LoginPage extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
-                    fontFamily: "Poppins",
+                     fontFamily: "Poppins",
                                 fontWeight: FontWeight.w700,
                   ),
                   obscureText: true, 
                 ),
                 SizedBox(height: 30),
                 ElevatedButton(
+                  
                   onPressed: () {
+                    leading:  SizedBox(height: 20,);
                     Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
                   },
                   style: ElevatedButton.styleFrom(
+                    
                     shape: RoundedRectangleBorder(
+                      
                         borderRadius: BorderRadius.circular(10), // Köşeleri yuvarlatmak içi
                       ),
                     minimumSize: Size(400, 50),
                     backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                    
                     // Diğer özellikleri buraya ekleyebilirsiniz
                   ),
                   child: Text(
@@ -151,43 +155,42 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       color: bg,
-                      fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700,
                     ),
                   ),
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.only(top: 100),
-                  child: Container(
-                    alignment: Alignment.bottomCenter,
-                    padding: EdgeInsets.only(top: 260),
-                    child: Text.rich(
-                      TextSpan(
-                        text: 'Designed by ',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: mainColor,
-                          fontFamily: "Poppins",
-                                fontWeight: FontWeight.w300,
-                          
-                          
-                  
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: "Bug Zappers",
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: mainColor,
-                              fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700,
-                              
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(),
+                    child: Container(
+                      alignment: Alignment.bottomCenter,
+                      padding: EdgeInsets.only(top: 340),
+                      child: Text.rich(
+                        TextSpan(
+                          text: 'Designed by ',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: mainColor,
+                            fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w300,
+                            
+                            
+                    
+                          ),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: "Bug Zappers",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: mainColor,
+                                fontWeight: FontWeight.bold,
+                                
+                              )
                             )
-                          )
-                        ]
-                      )
-                  
+                          ]
+                        )
+                    
+                      ),
                     ),
                   ),
                 ),

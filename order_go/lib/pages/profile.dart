@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:order_go/pages/history.dart';
+import 'package:order_go/pages/homepage.dart';
+import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -12,26 +15,10 @@ class ProfilePage extends StatelessWidget {
       backgroundColor: bg,
       appBar: AppBar(
         //Profile
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.person),
-            padding: EdgeInsets.only(right: 30),
-            iconSize: 40,
-            color: bg,
-            onPressed: () {
-              // Arama işlemini tetikle
-            },
-          )
-        ],
-
+        
+          leading: SizedBox(height: 20,width: 32,),
         //Menu Button
-        leading: IconButton(
-          padding: EdgeInsets.only(left: 30, bottom: 10),
-          icon: Icon(Icons.menu),
-          iconSize: 40,
-          color: bg,
-          onPressed: () {},
-        ),
+        
         toolbarHeight: 100,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
@@ -45,9 +32,7 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(20), // Yatay yönde genişlik verelim
-          child: Center(
+        child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
@@ -56,30 +41,34 @@ class ProfilePage extends StatelessWidget {
                   height: 30,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 0),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     'Profile',
                     style: TextStyle(
                       fontSize: 40, // Metin boyutu
-                      color: mainColor, // Metin rengi
+                      color: mainColor,
+                      fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold, // Metin rengi
                     ),
                   ),
                 ),
                 SizedBox(height: 25,),
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 20),
                   child: Text(
-                    'username',
+                    'Username',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 20,
                       color: Colors.white,
+                      fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 SizedBox(height: 10),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'username',
+                    hintText: 'Esref Design',
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
@@ -92,25 +81,29 @@ class ProfilePage extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 20),
                   child: Text(
-                    'password',
+                    'Password',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 20,
                       color: Colors.white,
+                      fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 SizedBox(height: 10),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'username',
+                    hintText: '*********',
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
@@ -123,6 +116,8 @@ class ProfilePage extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
                   ),
                   obscureText: true, 
                 ),
@@ -130,19 +125,21 @@ class ProfilePage extends StatelessWidget {
                   height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 20),
                   child: Text(
-                    'phone number',
+                    'Phone number',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 20,
                       color: Colors.white,
+                      fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 SizedBox(height: 10),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'username',
+                    hintText: '0536 592 1618',
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
@@ -155,46 +152,83 @@ class ProfilePage extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 100.0,left: 70),
+                  padding: const EdgeInsets.only(top: 70.0,left: 70),
                   child: SvgPicture.asset('assets/pictres/undraw_personal_information_re_vw8a.svg',width: 300,),
                 ),
                 
 
+                Stack(
+                  children: [
+                      
+                  
+                  Container(
+                    
+                  height: 120,
+                  width: 500,
+                  
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                    
+                  ),
+                ),
+                  Row(
+                    
+                    
+                    children: [
+                      
+                  IconButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                  },
+                    icon:Icon(Icons.settings),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
+
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                   },
+                    icon:Icon(Icons.home),
+                    iconSize: 50,
+                    color: mainColor,
+                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
+                  
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                   },
+                    icon:Icon(Icons.person),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.symmetric(vertical: 30,)),
+                    ],
+                  )
+                    
+                  
+                  
+
+                  ],
+                )
+
               ],
+              
             ),
           ),
+          
         ),
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          ),
-          color: Colors.white, // Arka plan rengi
-        ),
-        child: BottomNavigationBar(
-          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
-          elevation: 0, // Gölgeyi kaldır
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.history, size: 40, color: bg),
-              label: 'history',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 40, color: bg),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings, size: 40, color: bg),
-              label: 'settings',
-            ),
-          ],
-        ),
-      ),
+
+        
+              
+      
+      
     );
   }
 }

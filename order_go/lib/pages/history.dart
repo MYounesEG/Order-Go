@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:order_go/pages/homepage.dart';
+import 'package:order_go/pages/profile.dart';
+import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,26 +15,10 @@ class HistoryPage extends StatelessWidget {
       backgroundColor: bg,
       appBar: AppBar(
         //Profile
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.person),
-            padding: EdgeInsets.only(right: 30),
-            iconSize: 40,
-            color: bg,
-            onPressed: () {
-              // Arama işlemini tetikle
-            },
-          )
-        ],
+        
 
         //Menu Button
-        leading: IconButton(
-          padding: EdgeInsets.only(left: 30, bottom: 10),
-          icon: Icon(Icons.menu),
-          iconSize: 40,
-          color: bg,
-          onPressed: () {},
-        ),
+        leading: SizedBox(height: 12,),
         toolbarHeight: 100,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
@@ -46,7 +33,7 @@ class HistoryPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20), // Yatay yönde genişlik verelim
+          padding: EdgeInsets.symmetric(vertical: 10), // Yatay yönde genişlik verelim
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -145,39 +132,68 @@ class HistoryPage extends StatelessWidget {
                   ),
                 ),
 
-                
+                Stack(
+                  children: [
+                      
+                  
+                  Container(
+                    
+                  height: 120,
+                  width: 500,
+                  
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                    
+                  ),
+                ),
+                  Row(
+                    
+                    
+                    children: [
+                      
+                  IconButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                  },
+                    icon:Icon(Icons.settings),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
+
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                   },
+                    icon:Icon(Icons.home),
+                    iconSize: 50,
+                    color: mainColor,
+                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
+                  
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                   },
+                    icon:Icon(Icons.person),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.symmetric(vertical: 30,)),
+                    ],
+                  )
+                    
+                  
+                  
+
+                  ],
+                )
               ],
             ),
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          ),
-          color: Colors.white, // Arka plan rengi
-        ),
-        child: BottomNavigationBar(
-          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
-          elevation: 0, // Gölgeyi kaldır
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.history, size: 40, color: bg),
-              label: 'history',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 40, color: bg),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings, size: 40, color: bg),
-              label: 'settings',
-            ),
-          ],
-        ),
-      ),
+     
+      
     );
   }
 }
