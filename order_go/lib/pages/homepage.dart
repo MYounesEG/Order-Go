@@ -60,6 +60,19 @@ class HomePage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
               children: <Widget>[
+                
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal:120),
+                  child: Text(
+                          'Favorites',
+                          style: TextStyle(
+                            fontSize: 30, // Metin boyutu
+                            color: Colors.white, // Metin rengi
+                          ),
+                              
+                    ),
+                ),
+
                 Container(
                   //width: 300,
                   height: 520,
@@ -75,9 +88,7 @@ class HomePage extends StatelessWidget {
                   child:ListView(
                     children: <Widget>[
 
-                      SizedBox(
-                        height: 10,
-                      ),
+                      
                       
                       Padding(
                         padding: const EdgeInsets.only(left:20,right: 20,top: 20),
@@ -90,8 +101,9 @@ class HomePage extends StatelessWidget {
                             border: Border.all(
                               color: bg, // Sınır rengi
                               width: 5, // Sınır genişliği
-                            ), // Arkaplan rengi burada belirlenir
-                            // Diğer dekorasyon özellikleri buraya eklenebilir
+                            ),
+                            
+
                           ),
                         ),
                       ),
@@ -168,19 +180,17 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 
-                SizedBox(
-                        height: 30,
-                      ),
+               
 
                 Padding(
-                  padding: const EdgeInsets.all(40.0),
+                  padding: const EdgeInsets.all(30.0),
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                          borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
                         ),
-                      minimumSize: Size(400, 50),
+                      minimumSize: Size(300, 30),
                       backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
                       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                       // Diğer özellikleri buraya ekleyebilirsiniz
@@ -203,7 +213,33 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
+          color: Colors.white, // Arka plan rengi
+        ),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
+          elevation: 0, // Gölgeyi kaldır
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.history,size: 40,color: bg),
+              label: 'history', 
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home,size: 40,color: bg),
+              label: 'home', 
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings,size: 40,color: bg),
+              label: 'settings', 
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
