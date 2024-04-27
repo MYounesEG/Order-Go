@@ -1,7 +1,7 @@
 # Order & Go
 
-(![Order & Go Logo](https://github.com/MYounesEG/Order-Go/assets/158834031/8c7e9fdc-7371-4b8c-b7d3-036e9c77bb77)
-)
+![Order & Go Logo](https://github.com/MYounesEG/Order-Go/assets/158834031/8c7e9fdc-7371-4b8c-b7d3-036e9c77bb77)
+
 
 ## Proje Tanımı
 
