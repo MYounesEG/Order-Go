@@ -124,6 +124,7 @@ class ProfilePage extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                   ),
+                  obscureText: true, 
                 ),
                 SizedBox(
                   height: 10,
