@@ -69,7 +69,7 @@ class _OrderPageState extends State<OrderPageTwo> {
                 Padding(
                   padding: const EdgeInsets.only(left: 150),
                   child: Text(
-                    'Pick a restaurant',
+                    'Pick a Menu',
                     style: TextStyle(
                       fontSize: 20, // Metin boyutu
                       color: Colors.white, // Metin rengi
@@ -93,7 +93,7 @@ class _OrderPageState extends State<OrderPageTwo> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Fİlter Coffee',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -119,7 +119,7 @@ class _OrderPageState extends State<OrderPageTwo> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Cookie',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -146,7 +146,7 @@ class _OrderPageState extends State<OrderPageTwo> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Pasta',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -172,7 +172,7 @@ class _OrderPageState extends State<OrderPageTwo> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Burger',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",

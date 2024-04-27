@@ -88,7 +88,7 @@ class _OrderPageState extends State<OrderPageThree> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          '5 Min',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -114,7 +114,7 @@ class _OrderPageState extends State<OrderPageThree> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          '10 Min' ,
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -141,7 +141,7 @@ class _OrderPageState extends State<OrderPageThree> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          '15 Min',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -167,7 +167,7 @@ class _OrderPageState extends State<OrderPageThree> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          '20 Min',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",

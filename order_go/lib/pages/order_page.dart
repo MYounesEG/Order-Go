@@ -93,7 +93,7 @@ class _OrderPageState extends State<OrderPageOne> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Balbuks',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -119,7 +119,7 @@ class _OrderPageState extends State<OrderPageOne> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Starbucks',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -146,7 +146,7 @@ class _OrderPageState extends State<OrderPageOne> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Coffy',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
@@ -172,7 +172,7 @@ class _OrderPageState extends State<OrderPageOne> {
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
-                          'Next',
+                          'Subway',
                           style: TextStyle(
                             fontSize: 25,
                             fontFamily: "Poppins",
