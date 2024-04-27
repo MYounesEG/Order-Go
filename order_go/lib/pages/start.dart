@@ -130,6 +130,37 @@ class StartPage extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 392.0,left: 70),
                   child: SvgPicture.asset('assets/pictres/undraw_off_road_re_leme.svg',width: 300,),
                 ),
+              
+              //
+                //login button
+                Padding(
+                   padding: const EdgeInsets.only(top: 600.0,left: 22),
+                   child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
+                          ),
+                        minimumSize: Size(400, 50),
+                        backgroundColor: Colors.transparent, // Doğru parametre backgroundColor olarak kullanılır
+                        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                        // Diğer özellikleri buraya ekleyebilirsiniz
+                      ),
+                      child: Text(
+                        '',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          color : bg,
+                        ),
+                      ),
+                    ),
+                 ),
+              //
+              
               ],
              ),
 
@@ -145,7 +176,6 @@ class StartPage extends StatelessWidget {
                       color: mainColor,
                       fontWeight: FontWeight.normal,
                       fontFamily: "Poppins"
-                      
                     ),
                     children: <TextSpan>[
                       TextSpan(
@@ -162,14 +192,8 @@ class StartPage extends StatelessWidget {
                   
                 ),
              ),
-            
-          
         ],
       )
-      
-
-      
-
     );
   }
 }
