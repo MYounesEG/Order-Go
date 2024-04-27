@@ -4,6 +4,7 @@ import 'package:order_go/pages/sign_up.dart';
 import 'package:order_go/pages/splash.dart';
 import 'package:order_go/pages/start.dart';
 import 'package:order_go/pages/homepage.dart';
+import 'package:order_go/pages/order_page.dart';
 
 void main() {
   runApp(const MyApp());

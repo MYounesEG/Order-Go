@@ -87,13 +87,20 @@ class HomePage extends StatelessWidget {
                   ),
                   child:ListView(
                     children: <Widget>[
-
-                      
                       
                       Padding(
                         padding: const EdgeInsets.only(left:20,right: 20,top: 20),
                         child: Container(
-                        
+                          child: Center(
+                            child: Text(
+                              "Favorites",
+                              style: TextStyle(
+                                fontSize: 30, // Metin boyutu
+                                color: Colors.white, // Metin rengi
+                              ),
+                                  
+                            ),
+                          ),
                           height: 75,
                           decoration: BoxDecoration(
                             color:bg,
