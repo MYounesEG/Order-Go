@@ -2,6 +2,9 @@
 
 ![Order & Go Logo](https://github.com/MYounesEG/Order-Go/assets/158834031/8c7e9fdc-7371-4b8c-b7d3-036e9c77bb77)
 
+## Figma Tasarımları
+
+https://www.figma.com/file/cMLBpvppVuxAKb1umZElrQ/Order-%26-Go?type=design&node-id=0-1&mode=design
 
 ## Proje Tanımı
 
