@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:order_go/pages/homepage.dart';
 import 'package:order_go/pages/order_page_3.dart';
+import 'package:order_go/pages/profile.dart';
+import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -52,9 +54,7 @@ class _OrderPageState extends State<OrderPageFour> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(20), // Yatay yönde genişlik verelim
-          child: Center(
+        child:Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start, // Sola yaslama
@@ -175,40 +175,73 @@ class _OrderPageState extends State<OrderPageFour> {
                         ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(),
+                  child: Stack(
+                    children: [
+                        
+                    
+                    Container(
+                    padding: EdgeInsets.all(10),
+                    height: 120,
+                    width: 500,
+                    
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                      
+                    ),
+                  ),
+                    Row(
+                      
+                    
+                      children: [
+                        
+                    IconButton(onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                    },
+                      icon:Icon(Icons.settings),
+                      
+                      color: bg,
+                      iconSize: 50,
+                      padding: EdgeInsets.only(top: 10,bottom: 10,left: 20)),
+                  
+                    
+                  
+                     IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                     },
+                      icon:Icon(Icons.home),
+                      iconSize: 50,
+                      color: mainColor,
+                      padding: EdgeInsets.only(top: 30,bottom: 30,right: 130,left: 130)),
+                    
+                    
+                  
+                     IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                     },
+                      icon:Icon(Icons.person),
+                      iconSize: 50,
+                      color: bg,
+                      padding: EdgeInsets.only(right: 10)),
+                      ],
+                    )
+                      
+                    
+                    
+                  
+                    ],
+                  ),
+                )
               ],
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          ),
-          color: Colors.white, // Arka plan rengi
-        ),
-        child: BottomNavigationBar(
+      
+      
           
-          currentIndex: 1,
-          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
-          elevation: 0, // Gölgeyi kaldır
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.history, size: 40, color: bg),
-              label: 'history',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 40, color: bg),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings, size: 40, color: bg),
-              label: 'settings',
-            ),
-          ],
-        ),
-      ),
+      
     );
   }
 }

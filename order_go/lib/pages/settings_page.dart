@@ -75,7 +75,7 @@ class SettingsPage extends StatelessWidget {
                   horizontalTitleGap:40 ,
                   title: Text('Exit app', style: TextStyle(color: Colors.white,fontSize: 30)),
                   onTap: () {
-                    // Çıkış yap işlemini gerçekleştir
+                   Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),)); // Çıkış yap işlemini gerçekleştir
                   },
                 ),
               ),
@@ -104,60 +104,61 @@ class SettingsPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 200),
               child: Stack(
+                  children: [
+                      
+                  
+                  Container(
+                  padding: EdgeInsets.all(10),
+                  height: 120,
+                  width: 500,
+                  
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                    
+                  ),
+                ),
+                  Row(
+                    
+                  
                     children: [
-                        
-                    
-                    Container(
                       
-                    height: 120,
-                    width: 500,
+                  IconButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                  },
+                    icon:Icon(Icons.settings),
                     
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
-                      
-                    ),
-                  ),
-                    Row(
-                      
-                      
-                      children: [
-                        
-                    IconButton(onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
-                    },
-                      icon:Icon(Icons.settings),
-                      iconSize: 50,
-                      color: bg,
-                      padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
-              
-                    
-              
-                     IconButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
-                     },
-                      icon:Icon(Icons.home),
-                      iconSize: 50,
-                      color: mainColor,
-                      padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
-                    
-                    
-              
-                     IconButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
-                     },
-                      icon:Icon(Icons.person),
-                      iconSize: 50,
-                      color: bg,
-                      padding: EdgeInsets.symmetric(vertical: 30,)),
-                      ],
-                    )
-                      
-                    
-                    
-              
+                    color: bg,
+                    iconSize: 50,
+                    padding: EdgeInsets.only(top: 10,bottom: 10,left: 20)),
+
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                   },
+                    icon:Icon(Icons.home),
+                    iconSize: 50,
+                    color: mainColor,
+                    padding: EdgeInsets.only(top: 30,bottom: 30,right: 130,left: 130)),
+                  
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                   },
+                    icon:Icon(Icons.person),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.only(right: 10)),
                     ],
-                  ),
+                  )
+                    
+                  
+                  
+
+                  ],
+                )
             )
           ],
           

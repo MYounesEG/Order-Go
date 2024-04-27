@@ -167,7 +167,7 @@ class ProfilePage extends StatelessWidget {
                       
                   
                   Container(
-                    
+                  padding: EdgeInsets.all(10),
                   height: 120,
                   width: 500,
                   
@@ -179,16 +179,17 @@ class ProfilePage extends StatelessWidget {
                 ),
                   Row(
                     
-                    
+                  
                     children: [
                       
                   IconButton(onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
                   },
                     icon:Icon(Icons.settings),
-                    iconSize: 50,
+                    
                     color: bg,
-                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 25)),
+                    iconSize: 50,
+                    padding: EdgeInsets.only(top: 10,bottom: 10,left: 20)),
 
                   
 
@@ -198,7 +199,7 @@ class ProfilePage extends StatelessWidget {
                     icon:Icon(Icons.home),
                     iconSize: 50,
                     color: mainColor,
-                    padding: EdgeInsets.symmetric(vertical: 30,horizontal: 100)),
+                    padding: EdgeInsets.only(top: 30,bottom: 30,right: 130,left: 130)),
                   
                   
 
@@ -208,7 +209,7 @@ class ProfilePage extends StatelessWidget {
                     icon:Icon(Icons.person),
                     iconSize: 50,
                     color: bg,
-                    padding: EdgeInsets.symmetric(vertical: 30,)),
+                    padding: EdgeInsets.only(right: 10)),
                     ],
                   )
                     

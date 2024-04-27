@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:order_go/pages/history.dart';
-import 'package:order_go/pages/homepage_2.dart';
+import 'package:order_go/pages/homepage.dart';
 import 'package:order_go/pages/homepage_3.dart';
 import 'package:order_go/pages/order_page.dart';
 import 'package:order_go/pages/profile.dart';
@@ -11,8 +11,8 @@ import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePageTwo extends StatelessWidget {
+  const HomePageTwo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                     ),
                     iconSize: 30, // İkon
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePageTwo(),));// Butona basıldığında yapılacak işlemler
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));// Butona basıldığında yapılacak işlemler
                     },
                   ),
 
@@ -89,7 +89,6 @@ class HomePage extends StatelessWidget {
                  ),
                   ],
                 ),
-               
                 SizedBox(
                   height: 15,
                 ),

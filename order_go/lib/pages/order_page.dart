@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:order_go/pages/homepage.dart';
 import 'package:order_go/pages/order_page_2.dart';
+import 'package:order_go/pages/profile.dart';
+import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/theme/color.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -52,7 +55,7 @@ class _OrderPageState extends State<OrderPageOne> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20), // Yatay yönde genişlik verelim
+          padding: EdgeInsets.symmetric(vertical: 30), // Yatay yönde genişlik verelim
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -61,139 +64,212 @@ class _OrderPageState extends State<OrderPageOne> {
                 SizedBox(
                   height: 10,
                 ),
+                 Center(
+                   child: Text(
+                      'Choose Restaurant',
+                      style: TextStyle(
+                        fontSize: 20, // Metin boyutu
+                        color: Colors.white, // Metin rengi
+                      ),
+                    ),
+                 ),
+               
+                SizedBox(
+                  height: 20,
+                ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 115),
-                  child: Text(
-                    'Choose Restaurant',
-                    style: TextStyle(
-                      fontSize: 20, // Metin boyutu
-                      color: Colors.white, // Metin rengi
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height: 130,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-
-                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height: 130,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height: 130,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 50, top: 5),
-                  child: Container(
-                    height:130,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      color: container,
-                      borderRadius:
-                          BorderRadius.circular(20), // Köşeleri yuvarlatma
-                      border: Border.all(
-                        color: bg, // Sınır rengi
-                        width: 5, // Sınır genişliği
-                      ),
-                    ),
-                  ),
-                ),
-                
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 20),
+                  padding: const EdgeInsets.only(top: 30,left: 75),
                   child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageTwo(),));
+                          
                         },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
                             ),
-                          minimumSize: Size(200, 80),
-                          backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
-                          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                          minimumSize: Size(300, 100),
+                          backgroundColor: container, // Doğru parametre backgroundColor olarak kullanılır
+                          
                           // Diğer özellikleri buraya ekleyebilirsiniz
                         ),
                         child: Text(
                           'Next',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 25,
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.bold,
-                            color : bg,
+                            color : Colors.white,
                           ),
                         ),
                       ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30,left: 75),
+                  child: ElevatedButton(
+                        onPressed: () {
+                         
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                            ),
+                          minimumSize: Size(300, 100),
+                          backgroundColor: container, // Doğru parametre backgroundColor olarak kullanılır
+                          
+                          // Diğer özellikleri buraya ekleyebilirsiniz
+                        ),
+                        child: Text(
+                          'Next',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.bold,
+                            color : Colors.white,
+                          ),
+                        ),
+                      ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 30,left: 75),
+                  child: ElevatedButton(
+                        onPressed: () {
+                          
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                            ),
+                          minimumSize: Size(300, 100),
+                          backgroundColor: container, // Doğru parametre backgroundColor olarak kullanılır
+                          
+                          // Diğer özellikleri buraya ekleyebilirsiniz
+                        ),
+                        child: Text(
+                          'Next',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.bold,
+                            color : Colors.white,
+                          ),
+                        ),
+                      ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30,left: 75),
+                  child: ElevatedButton(
+                        onPressed: () {
+                         
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                            ),
+                          minimumSize: Size(300, 100),
+                          backgroundColor: container, // Doğru parametre backgroundColor olarak kullanılır
+                          
+                          // Diğer özellikleri buraya ekleyebilirsiniz
+                        ),
+                        child: Text(
+                          'Next',
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.bold,
+                            color : Colors.white,
+                          ),
+                        ),
+                      ),
+                ),
+                 Center(
+                   child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => OrderPageTwo(),));
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25), // Köşeleri yuvarlatmak içi
+                              ),
+                            minimumSize: Size(200, 80),
+                            backgroundColor: mainColor, // Doğru parametre backgroundColor olarak kullanılır
+                            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                            // Diğer özellikleri buraya ekleyebilirsiniz
+                          ),
+                          child: Text(
+                            'Next',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: "Poppins",
+                              fontWeight: FontWeight.bold,
+                              color : bg,
+                            ),
+                          ),
+                        ),
+                 ),
+                
+                Stack(
+                  children: [
+                      
+                  
+                  Container(
+                  padding: EdgeInsets.all(10),
+                  height: 120,
+                  width: 500,
+                  
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
+                    
+                  ),
+                ),
+                  Row(
+                    
+                  
+                    children: [
+                      
+                  IconButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => SettingsPage(),));
+                  },
+                    icon:Icon(Icons.settings),
+                    
+                    color: bg,
+                    iconSize: 50,
+                    padding: EdgeInsets.only(top: 10,bottom: 10,left: 20)),
+
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => HomePage(),));
+                   },
+                    icon:Icon(Icons.home),
+                    iconSize: 50,
+                    color: mainColor,
+                    padding: EdgeInsets.only(top: 30,bottom: 30,right: 130,left: 130)),
+                  
+                  
+
+                   IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context) => ProfilePage(),));
+                   },
+                    icon:Icon(Icons.person),
+                    iconSize: 50,
+                    color: bg,
+                    padding: EdgeInsets.only(right: 10)),
+                    ],
+                  )
+                    
+                  
+                  
+
+                  ],
+                )
               ],
             ),
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          ),
-          color: Colors.white, // Arka plan rengi
-        ),
-        child: BottomNavigationBar(
-          
-          currentIndex: 1,
-          backgroundColor: Colors.transparent, // Arkaplanı saydam yap
-          elevation: 0, // Gölgeyi kaldır
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.history, size: 40, color: bg),
-              label: 'history',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 40, color: bg),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings, size: 40, color: bg),
-              label: 'settings',
-            ),
-          ],
-        ),
-      ),
+      
     );
   }
 }
