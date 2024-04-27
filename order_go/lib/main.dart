@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:order_go/pages/settings_page.dart';
 import 'package:order_go/pages/sign_up.dart';
 import 'package:order_go/pages/splash.dart';
 import 'package:order_go/pages/start.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SettingsPage(),
     );
   }
 }
