@@ -153,19 +153,11 @@ class StartPage extends StatelessWidget {
                 Center(
                   child: Padding(
                      padding: const EdgeInsets.only(top: 600.0,),
-                     child: ElevatedButton(
-                        onPressed: () {
+                     child: GestureDetector(
+                        onTap: () {
                           Navigator.push(context, MaterialPageRoute(builder:(context) => LoginPage(),));
                         },
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15), // Köşeleri yuvarlatmak içi
-                            ),
-                          minimumSize: Size(400, 50),
-                          backgroundColor: Colors.transparent, // Doğru parametre backgroundColor olarak kullanılır
-                          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                          // Diğer özellikleri buraya ekleyebilirsiniz
-                        ),
+                        
                         child: Text(
                           '',
                           style: TextStyle(

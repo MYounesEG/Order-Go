@@ -87,6 +87,8 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700,
                   ),
                 ),
                 SizedBox(height: 30),
@@ -105,6 +107,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700,
                   ),
                 ),
                 SizedBox(height: 30),
@@ -123,6 +127,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700,
                   ),
                   obscureText: true, 
                 ),
@@ -145,36 +151,44 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       color: bg,
+                      fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700,
                     ),
                   ),
                 ),
 
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  padding: EdgeInsets.only(top: 260),
-                  child: Text.rich(
-                    TextSpan(
-                      text: 'Designed by ',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: mainColor,
-                        fontWeight: FontWeight.normal,
-                        
-
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: "Bug Zappers",
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: mainColor,
-                            fontWeight: FontWeight.bold,
-                            
+                Padding(
+                  padding: const EdgeInsets.only(top: 100),
+                  child: Container(
+                    alignment: Alignment.bottomCenter,
+                    padding: EdgeInsets.only(top: 260),
+                    child: Text.rich(
+                      TextSpan(
+                        text: 'Designed by ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: mainColor,
+                          fontFamily: "Poppins",
+                                fontWeight: FontWeight.w300,
+                          
+                          
+                  
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: "Bug Zappers",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: mainColor,
+                              fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700,
+                              
+                            )
                           )
-                        )
-                      ]
-                    )
-
+                        ]
+                      )
+                  
+                    ),
                   ),
                 ),
               ],

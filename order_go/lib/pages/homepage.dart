@@ -14,29 +14,10 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
 
         //Profile
-        actions: <Widget>[
-        IconButton(
-
-          icon: Icon(Icons.person),
-          padding: EdgeInsets.only(right: 30),
-          iconSize: 40,
-          color: bg,
-          onPressed: () {
-            // Arama işlemini tetikle
-          },
-        )
-        ],
+        
 
         //Menu Button
-        leading: IconButton(
-          padding: EdgeInsets.only(left: 30,bottom: 10),
-          icon: Icon(Icons.menu),
-          iconSize: 40,
-          color: bg,
-          onPressed: () {
-
-          },
-        ),
+        
         toolbarHeight: 100,
         shape:RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
         backgroundColor:mainColor,
@@ -67,7 +48,10 @@ class HomePage extends StatelessWidget {
                             'Favorites',
                             style: TextStyle(
                               fontSize: 45, // Metin boyutu
-                              color: Colors.white, // Metin rengi
+                              color: mainColor,
+                              fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700,
+                               // Metin rengi
                             ),
                                 
                       ),
@@ -97,7 +81,9 @@ class HomePage extends StatelessWidget {
                               "Espresso",
                               style: TextStyle(
                                 fontSize: 30, // Metin boyutu
-                                color: Colors.white, // Metin rengi
+                                color: Colors.white,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700, // Metin rengi
                               ),
                                   
                             ),
@@ -124,7 +110,9 @@ class HomePage extends StatelessWidget {
                               "Filter Coffee",
                               style: TextStyle(
                                 fontSize: 30, // Metin boyutu
-                                color: Colors.white, // Metin rengi
+                                color: Colors.white,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700, // Metin rengi
                               ),
                                   
                             ),
@@ -145,7 +133,18 @@ class HomePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left:20,right: 20,top: 20),
                         child: Container(
-                        
+                          child: Center(
+                            child: Text(
+                              "Americano",
+                              style: TextStyle(
+                                fontSize: 30, // Metin boyutu
+                                color: Colors.white,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700, // Metin rengi
+                              ),
+                                  
+                            ),
+                          ),
                           height: 75,
                           decoration: BoxDecoration(
                             color:bg,
@@ -162,7 +161,18 @@ class HomePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left:20,right: 20,top: 20),
                         child: Container(
-                        
+                          child: Center(
+                            child: Text(
+                              "Flat White",
+                              style: TextStyle(
+                                fontSize: 30, // Metin boyutu
+                                color: Colors.white,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700, // Metin rengi
+                              ),
+                                  
+                            ),
+                          ),
                           height: 75,
                           decoration: BoxDecoration(
                             color:bg,
@@ -179,7 +189,18 @@ class HomePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left:20,right: 20,top: 20),
                         child: Container(
-                        
+                          child: Center(
+                            child: Text(
+                              "Lungo",
+                              style: TextStyle(
+                                fontSize: 30, // Metin boyutu
+                                color: Colors.white,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.w700, // Metin rengi
+                              ),
+                                  
+                            ),
+                          ),
                           height: 75,
                           decoration: BoxDecoration(
                             color:bg,
@@ -241,6 +262,8 @@ class HomePage extends StatelessWidget {
           color: Colors.white, // Arka plan rengi
         ),
         child: BottomNavigationBar(
+          
+          selectedItemColor: Colors.amber,  
           backgroundColor: Colors.transparent, // Arkaplanı saydam yap
           elevation: 0, // Gölgeyi kaldır
           items: [
