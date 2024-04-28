@@ -2,9 +2,7 @@
 
 ![Order & Go Logo](https://github.com/MYounesEG/Order-Go/assets/158834031/8c7e9fdc-7371-4b8c-b7d3-036e9c77bb77)
 
-## Figma Tasarımları
-
-https://www.figma.com/file/cMLBpvppVuxAKb1umZElrQ/Order-%26-Go?type=design&node-id=0-1&mode=design
+[Figma Tasarımları](https://www.figma.com/file/cMLBpvppVuxAKb1umZElrQ/Order-%26-Go?type=design&node-id=0-1&mode=design)
 
 ## Proje Tanımı
 
@@ -19,6 +17,17 @@ Order & Go, farklı mağaza uygulamalarını tek bir platformda birleştirerek a
 - **Firebase:** Kullanıcı verileri, favori ürünler ve tercihler için Firebase bulut veritabanı kullanılmıştır.
 - **API Entegrasyonu:** Farklı mağaza ve markaların ürünlerine erişim sağlamak için uygun API'ler entegre edilmiştir.
 ## Kurulum
-1. Projeyi klonlayın: `git clone https://github.com/MYounesEG/Order-Go.git`
+1. Projeyi klonlayın: `git clone https://github.com/esrefdesign/Order-Go.git`
 2. Gerekli bağımlılıkları yükleyin: `flutter pub get`
 3. Firebase projenizi yapılandırın ve `google-services.json` dosyasını ekleyin.
+
+## Katkıda Bulunma
+
+Bu projeyi **Bug Zappers** takımı olarak **[@EsrefDesign](https://github.com/esrefdesign)**, **[@ArdaOngun](https://github.com/Ardaongun)** ve **[@MYounes](https://github.com/MYounesEG/)** birlikte geliştirdi. Katkıda bulunmak isterseniz, lütfen bir pull talebi açın. Önerilerinizi ve geri bildirimlerinizi memnuniyetle karşılarız!
+
+### Takım Üyeleri
+
+- [@esrefdesign](https://github.com/esrefdesign)
+- [@Ardaongun](https://github.com/Ardaongun)
+- [@MYounes](https://github.com/MYounesEG/)
+
